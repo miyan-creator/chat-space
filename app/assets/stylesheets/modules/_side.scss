@@ -1,0 +1,23 @@
+.side {
+  float: left;
+  width: 300px;
+  padding: 0 20px;
+  color: #FFFFFF;
+ .side__header {
+    background-color: #253141;
+    height: 100px;
+    align-items: center;
+    display: flex;
+   .side__header__box {
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+     .side__header__box__menu {
+        flex: display;
+       li {
+          margin-left: 0.3rem;
+       }
+     }
+   }
+  }
+}
