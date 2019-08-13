@@ -1,13 +1,13 @@
 .side {
   float: left;
   width: 300px;
-  padding: 0 20px;
   color: #FFFFFF;
  .side__header {
     background-color: #253141;
     height: 100px;
     align-items: center;
     display: flex;
+    padding: 0 20px;
    .side__header__box {
       font-size: 16px;
       font-weight: bold;
@@ -18,6 +18,27 @@
           margin-left: 0.3rem;
        }
      }
+   }
+  }
+ .side__groups {
+    background-color: #2f3e51;
+    padding: 20px 20px 0;
+    height: calc(100vh - 100px);
+   a {
+     color: #FFFFFF;
+     text-decoration: none;
+    .side__group {
+      margin-bottom: 40px;
+      p.side__group__names {
+        font-size: 15px;
+        font-weight: bold;
+        border-bottom: 5px;
+      }
+      p.side__group__latest-message {
+        font-size: 11px;
+        font-weight: bold;
+      }
+    }
    }
   }
 }
