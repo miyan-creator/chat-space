@@ -3,7 +3,7 @@
   width: calc(100vw - 300px);
   .main__header {
     padding: 0 40px;
-    border-bottom: solid 1px #eee;
+    border-bottom: solid 1px #eeeeee;
     display: flex;
    .main__header__left__box {
       padding-top: 35px;
@@ -31,4 +31,26 @@
    }
    
   }
+ .main__content {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+  .main__content__message {
+    padding-bottom: 40px;
+   .main__content__message__upper-box {
+     display: flex;
+     padding-bottom: 10px;
+     p.main__content__message__upper-box__user-name {
+       font-size: 16px;
+       font-weight: bold;
+       color: #434A54
+     }
+     p.main__content__message__upper-box__time {
+       font-size: 12px;
+       color: #999999;
+       padding-left: 10px;
+     }
+   }
+  }
+ }
 }
