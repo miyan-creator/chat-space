@@ -29,7 +29,6 @@
         right: 40px;
      }
    }
-   
   }
  .main__content {
     height: calc(100vh - 190px);
@@ -43,7 +42,7 @@
      p.main__content__message__upper-box__user-name {
        font-size: 16px;
        font-weight: bold;
-       color: #434A54
+       color: #434A54;
      }
      p.main__content__message__upper-box__time {
        font-size: 12px;
@@ -52,5 +51,50 @@
      }
    }
   }
+ }
+ .main__bottom {
+   height: 90px;
+   padding: 20px 40px;
+   background-color: #ddd;
+   form.main__bottom__form {
+    display: flex;
+    .main__bottom__form__input-box {
+      position: relative;
+      width: 100%;
+     input.main__bottom__form__input-box__text {
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+     }
+     label.main__bottom__form__input-box__image {
+      font-size: 1.3rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      i.fa-image {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+      input#message_image.main__bottom__form__input-box__image__file {
+        display: none;
+      }
+     }
+    }
+    input.main__bottom__form__btn {
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
+    }
+   }
  }
 }
