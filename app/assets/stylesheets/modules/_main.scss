@@ -2,8 +2,10 @@
   float: left;
   width: calc(100vw - 300px);
   .main__header {
+    height: 100px;
     padding: 0 40px;
     border-bottom: solid 1px #eeeeee;
+    box-sizing: border-box;
     display: flex;
    .main__header__left__box {
       padding-top: 35px;
