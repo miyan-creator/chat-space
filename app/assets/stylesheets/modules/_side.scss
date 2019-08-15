@@ -11,11 +11,16 @@
    .side__header__box {
       font-size: 16px;
       font-weight: bold;
+      display: flex;
       width: 100%;
+      justify-content: space-between;
      .side__header__box__menu {
-        flex: display;
+        display: flex;
        li {
           margin-left: 0.3rem;
+          a {
+            color: #FFFFFF;
+          }
        }
      }
    }
