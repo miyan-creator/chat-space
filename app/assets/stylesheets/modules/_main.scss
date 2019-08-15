@@ -1,3 +1,4 @@
+@import "./config/_variable.scss";
 .main {
   float: left;
   width: calc(100vw - 300px);
@@ -15,18 +16,18 @@
      }
      .main__header__left__box__members {
        font-size: 12px;
-       color: #999999;
+       color: $mainGrayColor;
        display: flex;
      }
    }
-   a {color: #38aef0;
+   a {color: $mainButtonColor;
       text-decoration: none; //あとで他とまとめる
     .main__header__right__box__edit-btn {
         margin-top: 28px;
         height: 40px;
         line-height: 40px;
         padding: 0 20px;
-        border: solid 1px #38aef0;
+        border: solid 1px $mainButtonColor;
         position: absolute;
         right: 40px;
      }
@@ -48,7 +49,7 @@
      }
      p.main__content__message__upper-box__time {
        font-size: 12px;
-       color: #999999;
+       color: $mainGrayColor;
        padding-left: 10px;
      }
    }
@@ -93,7 +94,7 @@
       height: 50px;
       padding: 0 30px;
       margin-left: 15px;
-      background-color: #38aef0;
+      background-color: $mainButtonColor;
       color: white;
       cursor: pointer;
     }
