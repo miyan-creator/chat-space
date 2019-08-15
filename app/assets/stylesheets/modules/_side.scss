@@ -3,19 +3,19 @@
   float: left;
   width: 300px;
   color: $sideWhiteColor;
- .side__header {
+ &__header {
     background-color: #253141;
     height: 100px;
     align-items: center;
     display: flex;
     padding: 0 20px;
-   .side__header__box {
+   &__box {
       font-size: 16px;
       font-weight: bold;
       display: flex;
       width: 100%;
       justify-content: space-between;
-     .side__header__box__menu {
+     &__menu {
         display: flex;
        li {
           margin-left: 0.3rem;
@@ -26,7 +26,7 @@
      }
    }
   }
- .side__groups {
+ &__groups {
     background-color: #2f3e51;
     padding: 20px 20px 0;
     height: calc(100vh - 100px);
@@ -35,12 +35,12 @@
      text-decoration: none;
     .side__group {
       margin-bottom: 40px;
-      p.side__group__names {
+      &__names {
         font-size: 15px;
         font-weight: bold;
         border-bottom: 5px;
       }
-      p.side__group__latest-message {
+      &__latest-message {
         font-size: 11px;
         font-weight: bold;
       }

@@ -2,27 +2,27 @@
 .main {
   float: left;
   width: calc(100vw - 300px);
-  .main__header {
+  &__header {
     height: 100px;
     padding: 0 40px;
     border-bottom: solid 1px #eeeeee;
     display: flex;
-   .main__header__left__box {
+   &__left__box {
       padding-top: 35px;
-     .main__header__left__box__current-group {
+     &__current-group {
        font-size: 20px;
        color: #333333;
        padding-bottom: 15px;
      }
-     .main__header__left__box__members {
+     &__members {
        font-size: 12px;
        color: $mainGrayColor;
        display: flex;
      }
    }
-   a {color: $mainButtonColor;
-      text-decoration: none; //あとで他とまとめる
-    .main__header__right__box__edit-btn {
+   &__right__box {color: $mainButtonColor;
+      text-decoration: none; 
+    &__edit-btn {
         margin-top: 28px;
         height: 40px;
         line-height: 40px;
@@ -33,21 +33,21 @@
      }
    }
   }
- .main__content {
+ &__content {
     height: calc(100vh - 190px);
     padding: 46px 40px;
     background-color: #fafafa;
-  .main__content__message {
+  &__message {
     padding-bottom: 40px;
-   .main__content__message__upper-box {
+   &__upper-box {
      display: flex;
      padding-bottom: 10px;
-     p.main__content__message__upper-box__user-name {
+     &__user-name {
        font-size: 16px;
        font-weight: bold;
        color: #434A54;
      }
-     p.main__content__message__upper-box__time {
+     &__time {
        font-size: 12px;
        color: $mainGrayColor;
        padding-left: 10px;
@@ -55,23 +55,23 @@
    }
   }
  }
- .main__bottom {
+ &__bottom {
    height: 90px;
    padding: 20px 40px;
    background-color: #ddd;
-   form.main__bottom__form {
+   &__form {
     display: flex;
-    .main__bottom__form__input-box {
+    &__input-box {
       position: relative;
       width: 100%;
-     input.main__bottom__form__input-box__text {
+     &__text {
       height: 50px;
       width: 100%;
       padding: 0 40px 0 10px;
       color: #434a54;
       border-style: none;
      }
-     label.main__bottom__form__input-box__image {
+     &__image {
       font-size: 1.3rem;
       position: absolute;
       top: 10px;
@@ -84,12 +84,12 @@
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
       }
-      input#message_image.main__bottom__form__input-box__image__file {
+      &__file#message_image {
         display: none;
       }
      }
     }
-    input.main__bottom__form__btn {
+    &__btn {
       width: 100px;
       height: 50px;
       padding: 0 30px;
