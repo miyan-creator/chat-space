@@ -1,7 +1,8 @@
+@import "./config/_variable.scss";
 .side {
   float: left;
   width: 300px;
-  color: #FFFFFF;
+  color: $sideWhiteColor;
  .side__header {
     background-color: #253141;
     height: 100px;
@@ -19,7 +20,7 @@
        li {
           margin-left: 0.3rem;
           a {
-            color: #FFFFFF;
+            color: $sideWhiteColor;
           }
        }
      }
@@ -30,7 +31,7 @@
     padding: 20px 20px 0;
     height: calc(100vh - 100px);
    a {
-     color: #FFFFFF;
+     color: $sideWhiteColor;
      text-decoration: none;
     .side__group {
       margin-bottom: 40px;
