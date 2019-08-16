@@ -1,0 +1,103 @@
+@import "./config/_variable.scss";
+.main {
+  float: left;
+  width: calc(100vw - 300px);
+  &__header {
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: solid 1px #eeeeee;
+    display: flex;
+   &__left__box {
+      padding-top: 35px;
+     &__current-group {
+       font-size: 20px;
+       color: #333333;
+       padding-bottom: 15px;
+     }
+     &__members {
+       font-size: 12px;
+       color: $mainGrayColor;
+       display: flex;
+     }
+   }
+   &__right__box {color: $mainButtonColor;
+      text-decoration: none; 
+    &__edit-btn {
+        margin-top: 28px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border: solid 1px $mainButtonColor;
+        position: absolute;
+        right: 40px;
+     }
+   }
+  }
+ &__content {
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    background-color: #fafafa;
+  &__message {
+    padding-bottom: 40px;
+   &__upper-box {
+     display: flex;
+     padding-bottom: 10px;
+     &__user-name {
+       font-size: 16px;
+       font-weight: bold;
+       color: #434A54;
+     }
+     &__time {
+       font-size: 12px;
+       color: $mainGrayColor;
+       padding-left: 10px;
+     }
+   }
+  }
+ }
+ &__bottom {
+   height: 90px;
+   padding: 20px 40px;
+   background-color: #ddd;
+   &__form {
+    display: flex;
+    &__input-box {
+      position: relative;
+      width: 100%;
+     &__text {
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+     }
+     &__image {
+      font-size: 1.3rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      i.fa-image {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+      &__file#message_image {
+        display: none;
+      }
+     }
+    }
+    &__btn {
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: $mainButtonColor;
+      color: white;
+      cursor: pointer;
+    }
+   }
+ }
+}

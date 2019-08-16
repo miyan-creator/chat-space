@@ -1,0 +1,42 @@
+.wrapper
+  .side
+    .side__header
+      .side__header__box
+        %p.side__header__box__user-name Carrie
+        %ul.side__header__box__menu
+          %li.side__header__box__menu__new-mark
+            =link_to "/groups/new" do
+              %i.fa.fa-edit
+          %li.side__header__box__menu__edit-mark
+            =link_to "/users" do
+              %i.fa.fa-cog
+    .side__groups
+      =link_to "/groups" do
+        .side__group
+          %p.side__group__names SATC
+          %p.side__group__latest-message I will not be the first one to speak. And if he never calls me again, I'll always think of him fondly. As an asshole.
+  .main
+    .main__header
+      .main__header__left__box
+        %h2.main__header__left__box__current-group SATC
+        %ul.main__header__left__box__members
+          Member：
+          %li.main__header__left__box__member Carrie
+      =link_to "/groups/edit", class: "main__header__right__box" do
+        .main__header__right__box__edit-btn Edit
+    .main__content
+      .main__content__message
+        .main__content__message__upper-box
+          %p.main__content__message__upper-box__user-name Carrie
+          %p.main__content__message__upper-box__time 2019/08/01
+        .main__content__message__text-box
+          %p.main__content__message__text-box__text I will not be the first one to speak. And if he never calls me again, I'll always think of him fondly. As an asshole. 
+    .main__bottom
+      %form.main__bottom__form{method: "post"}
+        .main__bottom__form__input-box
+          %input.main__bottom__form__input-box__text{placeholder: "type a message", name: "text", type: "text"}
+          %label.main__bottom__form__input-box__image{for: "message_image"}
+            %i.fa-image
+            %input#message_image.main__bottom__form__input-box__image__file{name: "image", type: "file"}
+        %input.main__bottom__form__btn{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}
+
