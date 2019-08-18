@@ -2,7 +2,8 @@
   .side
     .side__header
       .side__header__box
-        %p.side__header__box__user-name Carrie
+        %h3.side__header__box__user-name
+          = current_user.name
         %ul.side__header__box__menu
           %li.side__header__box__menu__new-mark
             =link_to new_group_path do
@@ -17,4 +18,4 @@
             .side__group__names
               = group.name
             .side__group__latest-message
-              メッセージはまだありません。
+              = group.show_last_message

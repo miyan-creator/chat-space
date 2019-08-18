@@ -4,19 +4,17 @@
   .main
     .main__header
       .main__header__left__box
-        %h2.main__header__left__box__current-group SATC
+        %h2.main__header__left__box__current-group
+          = @group.name
         %ul.main__header__left__box__members
           Member：
-          %li.main__header__left__box__member Carrie
+          - @group.users.each do |user|
+            %li.main__header__left__box__member
+              = user.name
       =link_to "/groups/edit", class: "main__header__right__box" do
         .main__header__right__box__edit-btn Edit
     .main__content
-      .main__content__message
-        .main__content__message__upper-box
-          %p.main__content__message__upper-box__user-name Carrie
-          %p.main__content__message__upper-box__time 2019/08/01
-        .main__content__message__text-box
-          %p.main__content__message__text-box__text I will not be the first one to speak. And if he never calls me again, I'll always think of him fondly. As an asshole. 
+      = render @messages        
     .form
       = form_for [@group, @message] do |f|
         .form__box
