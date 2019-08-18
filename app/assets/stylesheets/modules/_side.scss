@@ -30,11 +30,11 @@
     background-color: #2f3e51;
     padding: 20px 20px 0;
     height: calc(100vh - 100px);
-   a {
-     color: $sideWhiteColor;
-     text-decoration: none;
-    .side__group {
+   .side__group {
       margin-bottom: 40px;
+     a {
+       color: $sideWhiteColor;
+       text-decoration: none;
       &__names {
         font-size: 15px;
         font-weight: bold;
