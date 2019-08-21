@@ -35,7 +35,9 @@ $(function(){
     $('.main__content').append(html);
     $('.form__box__message').val('');
     $('form')[0].reset();
-    scroll();
+    $("html,body").animate({scrollTop: $(document).height()
+    },1500);
+
   })
   .fail(function(){
     alert('error');
