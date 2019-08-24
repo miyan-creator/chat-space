@@ -4,7 +4,7 @@
   .main
     .main__header
       .main__header__left__box
-        %h2.main__header__left__box__current-group
+        %h2.main__header__left__box__current-group{data: {group: {id: @group.id}}}
           = @group.name
         %ul.main__header__left__box__members
           Member：

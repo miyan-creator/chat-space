@@ -69,8 +69,7 @@ $(function(){
     var html = buildHTML(data);
     $('.main__content').append(html);
     $('form')[0].reset();
-    $("html,body").animate({scrollTop: $(document).height()
-    },1500);
+    $('html,body').animate({scrollTop: 0}, 1000, 'swing');
 
   })
   .fail(function(){
@@ -84,6 +83,7 @@ $(function(){
  var reloadMessages = function() {
   //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
   last_message_id = $("#data")
+  group_id = $(".main__header__left__box__current-group").data('group_id')
   $.ajax({
     //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
     url: '/groups/${group_id}/api/messages',
@@ -101,6 +101,8 @@ $(function(){
       insertHTML += buildHTML(message);
     })
     $('.main__content').append(insertHTML)
+    $("html,body").animate({scrollTop: $(document).height()
+    },1500);
   })
   .fail(function() {
     console.log('error');
