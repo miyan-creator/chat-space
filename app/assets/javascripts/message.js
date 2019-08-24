@@ -1,23 +1,58 @@
 $(function(){
-  function buildHTML(message){
-    var image = ""
-    message.image ? image = `<img src="${message.image}">` : image =""
-    var html = `<div class="main__content__message__upper-box">
-                  <div class="main__content__message__upper-box__user-name">
-                    ${message.user_name}
-                  </div> 
-                  <div class="main__content__message__upper-box__time">
-                    ${message.created_at}
-                  </div>
-                </div>
-                <div class="main__content__message__text-box">
-                  <p class="main__content__message__text-box__text">
-                    ${message.content}
-                  </p>
-                  ${image}
-                </div>`;
+  var buildMessageHTML = function(message) {
+    if (message.content && message.image.url) {
+      //data-idが反映されるようにしている
+      var html = '<div class="message" data-id=' + message.id + '>' +
+        '<div class="upper-message">' +
+          '<div class="upper-message__user-name">' +
+            message.user_name +
+          '</div>' +
+          '<div class="upper-message__date">' +
+            message.created_at +
+          '</div>' +
+        '</div>' +
+        '<div class="lower-message">' +
+          '<p class="lower-message__content">' +
+            message.content +
+          '</p>' +
+          '<img src="' + message.image.url + '" class="lower-message__image" >' +
+        '</div>' +
+      '</div>'
+    } else if (message.content) {
+      //同様に、data-idが反映されるようにしている
+      var html = '<div class="message" data-id=' + message.id + '>' +
+        '<div class="upper-message">' +
+          '<div class="upper-message__user-name">' +
+            message.user_name +
+          '</div>' +
+          '<div class="upper-message__date">' +
+            message.created_at +
+          '</div>' +
+        '</div>' +
+        '<div class="lower-message">' +
+          '<p class="lower-message__content">' +
+            message.content +
+          '</p>' +
+        '</div>' +
+      '</div>'
+    } else if (message.image.url) {
+      //同様に、data-idが反映されるようにしている
+      var html = '<div class="message" data-id=' + message.id + '>' +
+        '<div class="upper-message">' +
+          '<div class="upper-message__user-name">' +
+            message.user_name +
+          '</div>' +
+          '<div class="upper-message__date">' +
+            message.created_at +
+          '</div>' +
+        '</div>' +
+        '<div class="lower-message">' +
+          '<img src="' + message.image.url + '" class="lower-message__image" >' +
+        '</div>' +
+      '</div>'
+    };
     return html;
-  }
+  };
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -59,7 +94,11 @@ $(function(){
     data: {id: last_message_id}
   })
   .done(function(messages) {
-    console.log('success');
+    var insertHTML = '';
+    messages.forEach(function(message){
+      insertHTML += buildHTML(message);
+    })
+    $('.main__content').append(insertHTML)
   })
   .fail(function() {
     console.log('error');
