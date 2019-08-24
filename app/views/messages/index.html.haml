@@ -11,7 +11,7 @@
           - @group.users.each do |user|
             %li.main__header__left__box__member
               = user.name
-      =link_to "/groups/edit", class: "main__header__right__box" do
+      =link_to edit_group_path(@group), class: "main__header__right__box" do
         .main__header__right__box__edit-btn Edit
     .main__content
       = render @messages        
