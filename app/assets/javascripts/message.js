@@ -69,7 +69,8 @@ $(function(){
     var html = buildHTML(data);
     $('.main__content').append(html);
     $('form')[0].reset();
-    $('html,body').animate({scrollTop: 0}, 1000, 'swing');
+    $("html,body").animate({scrollTop: $(document).height()
+    },1500);
 
   })
   .fail(function(){
